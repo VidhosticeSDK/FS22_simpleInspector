@@ -696,7 +696,8 @@ function SimpleInspector:draw()
 				-- Show the farm name, it's different from the last entry
 				lastFarmID = thisEntry.farmInfo.farmID
 
-				JTSUtil.dispStackAdd(outputTextLines, thisEntry.farmInfo.farmName, thisEntry.farmInfo.farmColor, true)
+				--JTSUtil.dispStackAdd(outputTextLines, thisEntry.farmInfo.farmName, thisEntry.farmInfo.farmColor, true)
+				JTSUtil.dispStackAdd(outputTextLines, thisEntry.farmInfo.farmName .. " (" .. tostring(self.mission.environment.currentYear) .. " rok)", thisEntry.farmInfo.farmColor, true)
 			end
 
 			JTSUtil.stackNewRow(outputTextLines)
